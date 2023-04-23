@@ -103,15 +103,11 @@ def process_gif(path, dst_width, dst_height):
     im = Image.open(path)
 
     i = 0
-    p = im.getpalette()
     last_frame = im.convert('RGBA')
     files = []
 
     try:
         while True:
-            if not im.getpalette():
-                im.putpalette(p)
-
             new_frame = Image.new('RGBA', im.size)
 
             if mode == 'partial':
