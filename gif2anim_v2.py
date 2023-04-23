@@ -81,7 +81,7 @@ def pad_resize(src, dst_size):
     #   scale_size[0],
     #   scale_size[1]
     # ))
-    scaled_src = src.resize(scale_size, Image.ANTIALIAS)
+    scaled_src = src.resize(scale_size, Image.Resampling.LANCZOS)
     # print("pasted origin: x={}, y={}".format(
     #   origin_point[0],
     #   origin_point[1]
